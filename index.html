@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Network Analytics</title>
 
-<!-- Favicon (SVG) -->
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <!-- Icons -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="/favicon-32.png" sizes="32x32" type="image/png"> <!-- optional -->
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">                        <!-- optional -->
+  <meta name="theme-color" content="#004aad">
 
-<!-- Optional: tab color on mobile browsers -->
-<meta name="theme-color" content="#004aad">
-
-  
   <style>
     :root { --brand:#004aad; --ink:#222; --muted:#6b7280; }
     * { box-sizing: border-box; }
@@ -26,11 +25,11 @@
       color: #fff;
       position: relative;
       isolation: isolate;              /* ensure overlay sits below content */
-      /* If you have a 2x version, uncomment the image-set() and comment the single url() */
       background:
         linear-gradient(0deg, rgba(0,0,0,.45), rgba(0,0,0,.25)), /* overlay */
         url('/images/Power.png') center / cover no-repeat;
-      /* background:
+      /* If you have a 2x version, use image-set():
+      background:
         linear-gradient(0deg, rgba(0,0,0,.45), rgba(0,0,0,.25)),
         image-set(
           url('/images/Power.png') 1x,
@@ -61,6 +60,12 @@
     a { color:var(--brand); text-decoration:none; }
     a:hover { text-decoration:underline; }
 
+    /* Tight 2-line heading (Option A) */
+    .tight-heading {
+      line-height: 1.2;     /* adjust 1.1–1.25 to taste */
+      margin: 0 0 1rem 0;   /* space below the whole heading */
+    }
+
     /* Respect reduced motion */
     @media (prefers-reduced-motion: no-preference) {
       .hero__content { transform: translateY(0); animation: floatIn .5s ease-out both; }
@@ -85,11 +90,11 @@
 
   <main>
     <section class="card">
-     
-<h2 class="tight-heading">
-  Specialist Consulting<br>
-  for New Zealand Electricity Distribution Businesses
-</h2>
+      <!-- One H2, forced line break, tighter line-height -->
+      <h2 class="tight-heading">
+        Specialist Consulting<br>
+        for New Zealand Electricity Distribution Businesses
+      </h2>
 
       <p>Network Analytics provides consultancy and project services to electricity distribution businesses across Aotearoa New Zealand. I help networks meet their regulatory obligations, improve pricing outcomes, and strengthen their commercial and operational performance.</p>
       <p>With deep experience in the Commerce Act, Electricity Authority Code, and registry obligations, I translate complex regulatory requirements into clear, workable solutions.</p>
@@ -123,23 +128,21 @@
       </ul>
     </section>
 
-   <section class="card">
-  <h2>Contact</h2>
-  <p>
-    <strong>Alex Nisbet</strong><br>
-    Phone: <a href="tel:+64272488614">027 248 8614</a><br>
-    Email: <a href="mailto:alex@networkanalytics.co.nz">alex@networkanalytics.co.nz</a><br>
-    Website: <a href="https://www.networkanalytics.co.nz">www.networkanalytics.co.nz</a><br>
-    <strong>Network Analytics Limited</strong>
-  </p>
-</section>
+    <section class="card">
+      <h2>Contact</h2>
+      <p>
+        <strong>Alex Nisbet</strong><br>
+        Phone: <a href="tel:+64272488614">027 248 8614</a><br>
+        Email: <a href="mailto:alex@networkanalytics.co.nz">alex@networkanalytics.co.nz</a><br>
+        Website: <a href="https://www.networkanalytics.co.nz">www.networkanalytics.co.nz</a><br>
+        <strong>Network Analytics Limited</strong>
+      </p>
+    </section>
   </main>
 
   <footer>&copy; <span id="y"></span> Network Analytics</footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
-
-
-
